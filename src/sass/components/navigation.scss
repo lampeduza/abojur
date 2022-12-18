@@ -1,0 +1,22 @@
+@use './global/library.scss';
+
+.navigation__list {
+	width: 470px;
+	display: grid;
+	grid-template-columns: 174px 272px;
+	align-items: start;
+	gap: 24px;
+	@include library.reset-list;
+}
+
+.navigation__item {
+	display: grid;
+	grid-template-columns: 18px auto;
+	column-gap: 10px;
+}
+
+.navigation__text,
+.navigation__link {
+	grid-column: 2 / -1;
+	@include library.navigation-text;
+}

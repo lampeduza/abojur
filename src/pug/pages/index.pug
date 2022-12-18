@@ -1,0 +1,297 @@
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="content")
+    link(rel="stylesheet" href="css/styles.css")
+    link(rel="preload" href="fonts/montserrat/500.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat/700.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/old-standard-tt/400.woff2" as="font" type="font/woff2" crossorigin)
+    title Abojur | Студия дизайнерского текстиля в Санкт-Петербурге
+  body
+    header.header
+      .header__wrapper.container
+        //- LOGO COMPONENT
+        a.header__logo.logo(href="#" title="Логотип студии дизайнерского текстиля в Санкт-Петербурге")
+          svg(width="375" height="52")
+            use(xlink:href="img/sprite.svg#logo")
+        h1.visually-hidden Студия дизайнерского текстиля в Санкт Петербурге
+        //- NAVIGATION COMPONENT
+        nav.header__navigation.navigation
+          ul.navigation__list
+            li.navigation__item.navigation__item--number
+              svg(width="20" height="20")
+                use(xlink:href="img/sprite.svg#phone")
+              p.navigation__text +7 (981) 000-00-00
+              a.navigation__link(href="tel:+79810000000") заказать звонок
+            li.navigation__item.navigation__item--location
+              svg(width="18" height="22")
+                use(xlink:href="img/sprite.svg#location")
+              p.navigation__text Санкт Петербург, набережная реки Карповки, дом 5, литер П
+        a.header__expand(href="#")
+          svg(width="36" height="32")
+            use(xlink:href="img/sprite.svg#burger")
+          span.visually-hidden Развернуть дополнительное окно
+    main.main
+      //- HERO COMPONENT
+      section.hero
+        .hero__wrapper.container
+          .hero__content
+            h2.hero__title.title.title--primary Создадим эмоцию вашего интерьера
+            p.hero__text Интерьерный текстиль по индивидуальным размерам с доставкой на дом
+            button.hero__get.button(type="button") Получить консультацию
+          picture.hero__picture
+            source(type="image/webp" srcset="img/hero/image.webp 1x, img/hero/image@2x.webp 2x")
+            img.hero__image(src="img/hero/image.jpg" srcset="img/hero/image@2x.jpg 2x" width="573" height="520" alt="Образ созданного интерьера." title="Образ созданного интерьера" loading="lazy")
+      //- ABOUT COMPONENT
+      section.about
+        .about__wrapper.container
+          h2.about__title.title.title--secondary О компании
+          .about__content
+            p.about__text
+              .
+                Дорогие друзья! От имени команды Artendo textile studio, приветствую Вас на нашем сайте.
+            p.about__text
+              .
+                Премиальный европейский текстиль – одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям – вот то,  что по-настоящему вдохновляет дизайнеров нашей студии.
+            p.about__text
+              .
+                Наш коллектив сделает все, чтобы после сотрудничества с нами,  Вам было приятно сказать: « Да! Это именно то, что действительно достойно моего дома!»
+          .about__info
+            picture.about__picture
+              source(type="image/webp" srcset="img/about/image.webp 1x, img/about/image@2x.webp 2x")
+              img.about__image(src="img/about/image.jpg" srcset="img/about/image@2x.jpg 2x" width="276" height="160" alt="Подушки из специальных тканей." title="Подушки из специальных тканей" loading="lazy")
+            p.about__info-text
+              .
+                Недавно мы писали статью о тканях, которые используем в работе, и источниках вдохновения.
+          .about__quote
+            picture.about__picture
+              source(type="image/webp" srcset="img/about/panorama.webp 1x, img/about/panorama@2x.webp 2x")
+              img.about__image(src="img/about/panorama.jpg" srcset="img/about/panorama@2x.jpg 2x" width="1166" height="304" alt="Изделия из тканей." title="Изделия из тканей")
+            blockquote.about__blockquote
+              .
+                Понимание тенденций рынка и особенностей менталитета наших клиентов приводит нас к созданию ценной концепции. Все проекты, которые мы делаем, созданы для людей. И это наш приоритет.
+          .about__content
+            p.about__text
+              .
+                Мы предлагаем только лучшее и нам важно, чтобы все идеально сочеталось, будь то классический или современный интерьер. Самые последние коллекции, созданные европейскими дизайнерами  – мастерами своего дела из лучших тканей,  всегда на нашем складе.
+          figure.about__figure
+            picture.about__picture
+              source(type="image/webp" srcset="img/about/image2.webp 1x, img/about/image2@2x.webp 2x")
+              img.about__image(src="img/about/image2.jpg" srcset="img/about/image2@2x.jpg 2x" width="672" height="360" alt="Последние коллекции, созданные мастерами." title="Последние коллекции, созданные мастерами" loading="lazy")
+            figcaption.about__caption
+              .
+                Подушки #[a.about__link(href="#" title="Подушка Elixir №3") Elixir №3] и #[a.about__link(href="#" title="Подушка Elixir №21") Elixir №21] из&nbsp;зимней коллекции 2020 года
+          .about__content
+            p.about__text
+              .
+                Мы не хотим просто делать текстиль. Мы хотим его создать. Мы хотим, чтобы он  был  исключительным  и отличался, сохраняя качество на максимальном уровне.
+      //- BEST COMPONENT
+      section.best
+        .best__wrapper.container
+          h2.best__title.title.title--secondary Для вас только #[br] самое лучшее
+          ul.best__list
+            li.best__item.best__item--tile
+              picture.best__picture
+                source(type="image/webp" srcset="img/best/item1.webp 1x, img/best/item1@2x.webp 2x")
+                img.best__image(src="img/best/item1.jpg" srcset="img/best/item1@2x.jpg 2x" width="375" height="240" alt="Подушки Casa Nova." title="Подушки Casa Nova" loading="lazy")
+              .best__content
+                h3.best__subtitle Подушки Casa Nova
+                span.best__price от 15 000 ₽
+                p.best__note *стоимость варьируется в зависимости от размера изделия
+                a.best__link.item-link(href="#")
+                  .
+                    Заказать
+                  svg(width="81" height="8")
+                    use(xlink:href="img/sprite.svg#line")
+            li.best__item.best__item--tile
+              picture.best__picture
+                source(type="image/webp" srcset="img/best/item2.webp 1x, img/best/item2@2x.webp 2x")
+                img.best__image(src="img/best/item2.jpg" srcset="img/best/item2@2x.jpg 2x" width="375" height="240" alt="Покрывало Шанти." title="Покрывало Шанти" loading="lazy")
+              .best__content
+                h3.best__subtitle Покрывало ШАНТИ
+                span.best__price от 13 660 ₽
+                p.best__note *стоимость варьируется в зависимости от размера изделия
+                a.best__link.item-link(href="#")
+                  .
+                    Заказать
+                  svg(width="81" height="8")
+                    use(xlink:href="img/sprite.svg#line")
+            li.best__item.best__item--tile
+              picture.best__picture
+                source(type="image/webp" srcset="img/best/item3.webp 1x, img/best/item3@2x.webp 2x")
+                img.best__image(src="img/best/item3.jpg" srcset="img/best/item3@2x.jpg 2x" width="375" height="240" alt="Подушки Elixir №7." title="Подушки Elixir №7" loading="lazy")
+              .best__content
+                h3.best__subtitle Подушки Elixir №7
+                span.best__price от 15 000 ₽
+                p.best__note *стоимость варьируется в зависимости от размера изделия
+                a.best__link.item-link(href="#")
+                  .
+                    Заказать
+                  svg(width="81" height="8")
+                    use(xlink:href="img/sprite.svg#line")
+            li.best__item.best__item--row
+              picture.best__picture
+                source(type="image/webp" srcset="img/best/item4.webp 1x, img/best/item4@2x.webp 2x")
+                img.best__image(src="img/best/item4.jpg" srcset="img/best/item4@2x.jpg 2x" width="375" height="240" alt="Подушки Basic." title="Подушки Basic" loading="lazy")
+              .best__content
+                h3.best__subtitle Подушки Basic
+                span.best__price от 11 000 ₽
+                p.best__note *стоимость варьируется в зависимости от размера изделия
+                a.best__link.item-link(href="#")
+                  .
+                    Заказать
+                  svg(width="81" height="8")
+                    use(xlink:href="img/sprite.svg#line")
+            li.best__item.best__item--row
+              picture.best__picture
+                source(type="image/webp" srcset="img/best/item5.webp 1x, img/best/item5@2x.webp 2x")
+                img.best__image(src="img/best/item5.jpg" srcset="img/best/item5@2x.jpg 2x" width="375" height="240" alt="Подушки Vintage." title="Подушки Vintage" loading="lazy")
+              .best__content
+                h3.best__subtitle Подушки Basic
+                span.best__price от 17 000 ₽
+                p.best__note *стоимость варьируется в зависимости от размера изделия
+                a.best__link.item-link(href="#")
+                  .
+                    Заказать
+                  svg(width="81" height="8")
+                    use(xlink:href="img/sprite.svg#line")
+      //- PROJECTS COMPONENT
+      section.projects
+        .projects__wrapper.container
+          h2.projects__title.title.title--secondary Нам есть, чем #[br] гордиться!
+          .project__slider.slider
+            ul.slider__list
+              li.slider__item
+                figure.slider__figure
+                  picture.slider__picture
+                    source(type="image/webp" srcset="img/projects/item.webp 1x, img/projects/item@2x.webp 2x")
+                    img.slider__image(src="img/projects/item.jpg" srcset="img/projects/item@2x.jpg 2x" width="968" height="660" alt="Образ оформления коттеджа" title="Образ оформления коттеджа" loading="lazy")
+                  figure.slider__information
+                    figcaption.slider__caption Oформление коттеджа
+                    a.slider__link(href="#")
+                      .
+                        Подробнее
+                      svg(width="33" height="8")
+                        use(xlink:href="img/sprite.svg#more-arrow")
+            button.slider__button.slider__button--previous(type="button")
+              svg(width="33" height="16")
+                use(xlink:href="img/sprite.svg#control-arrow")
+              span.visually-hidden Предыдущий слайд
+            button.slider__button.slider__button--next(type="button")
+              svg(width="33" height="16")
+                use(xlink:href="img/sprite.svg#control-arrow")
+              span.visually-hidden Следующий слайд
+      //- MISSION COMPONENT
+      section.mission
+        .mission__wrapper.container
+          .mission__container
+            picture.mission__picture.mission__picture--video
+              source(type="image/webp" srcset="img/mission/image.webp 1x, img/mission/image@2x.webp 2x")
+              img.mission__image(src="img/mission/image.jpg" srcset="img/mission/image@2x.jpg 2x" width="573" height="598" alt="Какое - то видео." title="Какое - то видео" loading="lazy")
+            picture.mission__picture.mission__picture--pillow
+              source(type="image/webp" srcset="img/mission/pillow.webp 1x, img/mission/pillow@2x.webp 2x")
+              img.mission__image(src="img/mission/pillow.jpg" srcset="img/mission/pillow@2x.jpg 2x" width="276" height="200" alt="Подушка на кресле-качалке." title="Подушка на кресле-качалке" loading="lazy")
+          .mission__container
+            .mission__content
+              h2.mission__title.title.title--secondary-white Наша миссия #[br] и видение
+              p.mission__text
+                .
+                  Мы не хотим просто делать текстиль. Мы хотим, чтобы он  был  исключительным  и отличался, сохраняя качество на максимальном уровне.
+              p.mission__text
+                .
+                  Продукты ABOJUR гарантируют вам оригинальный дизайн с превосходной отделкой ткани и изумительными элементами декора, которые сделают ваш интерьер уникальным.
+            picture.mission__picture.mission__picture--dog
+              source(type="image/webp" srcset="img/mission/dog.webp 1x, img/mission/dog@2x.webp 2x")
+              img.mission__image(src="img/mission/dog.jpg" srcset="img/mission/dog@2x.jpg 2x" width="573" height="360" alt="Лучший друг человека." title="Лучший друг человека" loading="lazy")
+      //- OUR TEAM COMPONENT
+      section.our-team
+        .our-team__wrapper.container
+          h2.our-team__title.title.title--secondary-white Наша творческая #[br] команда
+          .our-team__content
+            p.our-team__text
+              .
+                Мы - студия текстиля и дизайна, которая хочет стать частью большой истории. Будь то уютный стул, цветочное растение или стена, которую нужно разрушить, чтобы расширить комнату, все это одинаково важно для нас.
+            p.our-team__text
+              .
+                Работая по всей России, мы заботимся о том, как ваше пространство выглядит, чувствует и говорит. Все проекты созданы для людей. И это наш приоритет.
+          p.our-team__note
+            .
+              Мы разработали проекты различного масштаб и имеем большой опыт работы во всех регионах.
+          picture.our-team__picture
+            source(type="image/webp" srcset="img/team/team.webp 1x, img/team/team@2x.webp 2x")
+            img.our-team__image(src="img/team/team.jpg" srcset="img/team/team@2x.jpg 2x" width="1165" height="420" alt="Работающая команда людей." title="Работающая команда людей" loading="lazy")
+      section.collections
+        .collections__wrapper.container
+          h2.collections__title.title.title--secondary Метаморфозы
+          .collections__content
+            p.collections__text
+              .
+                В нашем ассортименте представлено 258 коллекций, новые&nbsp;поставки происходят регулярно так как мы следим за&nbsp;трендами, актуальными новинками и посещаем международные выставки.
+          ul.collections__list
+            li.collections__item.collections__item--big
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item1.webp 1x, img/collections/item1@2x.webp 2x")
+                img.collections__image(src="img/collections/item1.jpg" srcset="img/collections/item1@2x.jpg 2x" width="573" height="500" alt="Какая-та коллекция подушек." title="Какая-та коллекция подушек" loading="lazy")
+            li.collections__item
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item2.webp 1x, img/collections/item2@2x.webp 2x")
+                img.collections__image(src="img/collections/item2.jpg" srcset="img/collections/item2@2x.jpg 2x" width="573" height="240" alt="Какая-та сгруппированная коллекция подушек на кровати." title="Какая-та сгруппированная коллекция подушек на кровати" loading="lazy")
+            li.collections__item
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item3.webp 1x, img/collections/item3@2x.webp 2x")
+                img.collections__image(src="img/collections/item3.jpg" srcset="img/collections/item3@2x.jpg 2x" width="573" height="240" alt="Какая-та коллекция подушек возле обеденного столика." title="Какая-та коллекция подушек возле обеденного столика" loading="lazy")
+            li.collections__item
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item4.webp 1x, img/collections/item4@2x.webp 2x")
+                img.collections__image(src="img/collections/item4.jpg" srcset="img/collections/item4@2x.jpg 2x" width="573" height="240" alt="Новая постельная коллекция." title="Новая постельная коллекция" loading="lazy")
+            li.collections__item.collections__item--big
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item6.webp 1x, img/collections/item6@2x.webp 2x")
+                img.collections__image(src="img/collections/item6.jpg" srcset="img/collections/item6@2x.jpg 2x" width="573" height="500" alt="Какая-та коллекция подушек." title="Какая-та коллекция подушек" loading="lazy")
+            li.collections__item
+              picture.collections__picture
+                source(type="image/webp" srcset="img/collections/item5.webp 1x, img/collections/item5@2x.webp 2x")
+                img.collections__image(src="img/collections/item5.jpg" srcset="img/collections/item5@2x.jpg 2x" width="573" height="240" alt="Новая постельная коллекция." title="Новая постельная коллекция" loading="lazy")
+    //- FOOTER COMPONENT
+    footer.footer
+      .footer__wrapper.container
+        .footer__content
+          h2.footer__title.title.title--secondary-white мы всегда рады общению
+          p.footer__text
+            .
+              Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы.
+          form.footer__form(action="url" method="post")
+            ul.footer__fields
+              li.footer__field
+                label.footer__label.visually-hidden(for="firstName") Ваше имя
+                input#firstName.footer__input(type="text" name="first name" placeholder="Ваше имя" required)
+              li.footer__field
+                label.footer__label.visually-hidden(for="number") Ваш телефон
+                input#number.footer__input(type="tel" name="number" placeholder="Введите телефон" required)
+              //- SELECT COMPONENT
+              li.footer__field.footer__field--select.select
+                label.visually-hidden(for="time") Выберете удобное время
+                select#time.select__list(name="time")
+                  option.select__option(value="6:00") 6:00
+                  option.select__option(value="7:00") 7:00
+                  option.select__option(value="8:00") 8:00
+                .select__container
+                  span.select__value Удобное время
+                  svg(width="14" height="8")
+                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                ul.select__variants
+                  li.select__variant
+                    a.select__link(href="#") 06:00
+                  li.select__variant
+                    a.select__link(href="#") 07:00
+                  li.select__variant
+                    a.select__link(href="#") 08:00
+              li.footer__field.footer__field--checkbox
+                input#agreement.footer__input.visually-hidden(type="checkbox" name="agreement"  required checked)
+                label.footer__label(for="agreement") Согласие на обработку персональных данных
+            button.footer__tender.button(type="submit") Оставить заявку
+        picture.footer__picture
+          source(type="image/webp" srcset="img/talk/map.webp 1x, img/talk/map@2x.webp 2x")
+          img.footer__image(src="img/talk/map.jpg" srcset="img/talk/map@2x.jpg 2x" width="474" height="734" alt="description" title="description" loading="lazy")

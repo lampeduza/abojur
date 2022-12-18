@@ -1,0 +1,73 @@
+@use './global/library.scss';
+
+.select {
+	width: max-content;
+	border: 1px solid #A78587;
+	position: relative;
+}
+
+.select__container {
+	display: grid;
+	grid-template-columns: auto 14px;
+	align-items: center;
+	gap: 13px;
+	padding: 16px 20px;
+	cursor: pointer;
+
+	svg {
+		grid-column: 2 / 3;
+	}
+
+	span {
+		grid-column: 1 / 2;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+}
+
+.select__list {
+	@include library.visually-hidden;
+
+	a {
+		display: block;
+		padding: 8px 15px;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+}
+
+.select__variants {
+	@include library.reset-list;
+	border-top: none;
+	border: 1px solid #A78587;
+	width: 100%;
+	background-color: library.$primary-bg-color;
+
+	position: absolute;
+	top: 50px;
+	left: -1px;
+
+	display: none;
+
+	li {
+		border-bottom: 1px solid #A78587;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 16px 20px;
+		font-size: 14px;
+		line-height: 18px;
+		color: #FFFFFF;
+	}
+}

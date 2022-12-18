@@ -1,0 +1,44 @@
+@use './global/library.scss';
+
+.collections {
+	background-color: library.$secondary-bg-color;
+}
+
+.collections__wrapper {
+	padding-top: 158px;
+	padding-bottom: 120px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.collections__title {
+	grid-column: 1 / -1;
+	margin-bottom: 54px;
+
+	&::before {
+		content: 'collections';
+	}
+}
+
+.collections__content {
+	grid-column: 2 / span 6;
+
+	p {
+		margin-bottom: 40px;
+	}
+}
+
+.collections__list {
+	grid-column: 1 / -1;
+	@include library.reset-list;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.collections__item {
+	&--big {
+		grid-row-end: span 2;
+	}
+}

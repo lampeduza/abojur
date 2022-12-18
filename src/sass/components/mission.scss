@@ -1,0 +1,56 @@
+@use './global/library.scss';
+
+.mission {
+	background-color: library.$primary-bg-color;
+	background-image: url('../img/mission/background.jpg');
+	background-size: 100% 320px;
+	background-repeat: repeat-x;
+	background-position: 0 80%;
+
+	@media (min-resolution: library.$retina-dpi), (min-resolution: library.$retina-dppx) {
+		background-image: url('../img/mission/background@2x.jpg');
+  }
+}
+
+.mission__wrapper {
+	padding-top: 120px;
+	padding-bottom: 132px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.mission__container {
+	display: grid;
+	gap: 20px;
+}
+
+.mission__picture {
+	&--pillow {
+		justify-self: end;
+	}
+
+	&--dog {
+		align-self: end;
+	}
+}
+
+.mission__content {
+	padding-left: 100px;
+}
+
+.mission__title {
+	&::before {
+		content: 'mission';
+	}
+}
+
+.mission__text {
+	color: #FBF3F0;
+	margin-bottom: 16px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+

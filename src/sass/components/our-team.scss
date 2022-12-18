@@ -1,0 +1,46 @@
+@use './global/library.scss';
+
+.our-team {
+	background-color: library.$primary-bg-color;
+}
+
+.our-team__wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-auto-flow: dense;
+	padding-bottom: 120px;
+}
+
+.our-team__title {
+	grid-column: 2 / -1;
+	margin-bottom: 36px;
+
+	&::before {
+		content: 'our team';
+	}
+}
+
+.our-team__content {
+	grid-column: 2 / span 6;
+	margin-bottom: 40px;
+
+	p {
+		color: #FBF3F0;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.our-team__note {
+	font-size: 14px;
+	line-height: 24px;
+	color: #FBF3F0;
+	grid-column: -1 / -5;
+}
+
+.our-team__picture {
+	grid-column: 1 / -1;
+}

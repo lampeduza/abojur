@@ -1,0 +1,36 @@
+@use './global/library.scss';
+
+.best {
+	background-color: library.$secondary-bg-color;
+}
+
+.best__wrapper {
+	padding-bottom: 132px;
+}
+
+.best__list {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: start;
+	gap: 20px;
+}
+
+.best__item {
+	@include library.card;
+
+	&--tile {
+		@include library.card-tile;
+	}
+
+	&--row {
+		@include library.card-row;
+	}
+}
+
+.best__title {
+	margin-bottom: 34px;
+
+	&::before {
+		content: 'the best';
+	}
+}

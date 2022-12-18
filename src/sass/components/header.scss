@@ -1,0 +1,26 @@
+@use './global/library.scss';
+
+.header {
+	background-color: #F8F6F5;
+}
+
+.header__wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: center;
+	gap: 24px;
+	padding: 22px 0;
+}
+
+.header__logo {
+	grid-column: 1 / 5;
+}
+
+.header__navigation {
+	grid-column: 7 / 12;
+}
+
+.header__expand {
+	grid-column: 12 / -1;
+	margin-left: auto;
+}

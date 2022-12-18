@@ -1,0 +1,81 @@
+@use './global/library.scss';
+
+.about {
+	background-color: library.$secondary-bg-color;
+}
+
+.about__wrapper {
+	padding-top: 120px;
+	padding-bottom: 132px;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 40px;
+}
+
+.about__content {
+	grid-column: 2 / 8;
+}
+
+.about__text {
+	margin-bottom: 16px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.about__title {
+	grid-column: 2 / -1;
+	margin-bottom: 49px;
+
+	&::before {
+		content: 'about us';
+	}
+}
+
+.about__quote {
+	grid-column: 1 / -1;
+}
+
+.about__info {
+	grid-column: 9 / 12;
+
+	picture {
+		margin-bottom: 16px;
+	}
+}
+
+.about__figure {
+	grid-column: 2 / 12;
+
+	display: grid;
+	grid-template-columns: 672px auto;
+	align-items: end;
+	gap: 24px;
+}
+
+.about__caption {
+	font-size: 14px;
+	line-height: 24px;
+	width: 256px;
+	position: relative;
+	padding-left: 19px;
+
+	&::before {
+		content: '';
+		width: 1px;
+		height: 100%;
+		background-color: #A78587;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+}
+
+.about__link {
+	color: #9A8584;
+}
+
+

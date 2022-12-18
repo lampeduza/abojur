@@ -1,0 +1,20 @@
+@use './global/library.scss';
+
+.projects {
+	background-color: library.$secondary-bg-color;
+}
+
+.projects__wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	padding-bottom: 120px;
+}
+
+.projects__title {
+	grid-column: 2 / -1;
+	margin-bottom: 34px;
+
+	&::before {
+		content: 'projects';
+	}
+}

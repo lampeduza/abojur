@@ -1,0 +1,33 @@
+@use './global/library.scss';
+
+.hero {
+	background-color: #EEE9E6;
+	background-image: url('../img/hero/background.jpg');
+	background-repeat: repeat-x;
+	background-size: 100% 520px;
+
+	@media (min-resolution: library.$retina-dpi), (min-resolution: library.$retina-dppx) {
+		background-image: url('../img/hero/background@2x.jpg');
+  }
+}
+
+.hero__wrapper {
+	padding-top: 80px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: 24px;
+}
+
+.hero__content {
+	grid-column: 2 / 7;
+}
+
+.hero__text {
+	color: #EEE9E6;
+	opacity: 0.6;
+	margin-bottom: 36px;
+}
+
+.hero__picture {
+	grid-column: 7 / -1;
+}

@@ -1,0 +1,17 @@
+@use './global/library.scss';
+
+.title {
+	@include library.title;
+
+	&--primary {
+		@include library.title-primary;
+	}
+
+	&--secondary {
+		@include library.title-secondary;
+	}
+
+	&--secondary-white {
+		@include library.title-secondary-white;
+	}
+}

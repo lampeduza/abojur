@@ -1,0 +1,134 @@
+@use './global/library.scss';
+
+.footer {
+	background-color: library.$primary-bg-color;
+}
+
+.footer__wrapper {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-items: center;
+}
+
+.footer__title {
+	margin-bottom: 36px;
+
+	&::before {
+		content: 'talk';
+	}
+}
+
+.footer__content {
+	grid-column: 2 / span 5;
+
+	p {
+		color: #EEE9E6;
+		opacity: 0.6;
+		margin-bottom: 44px;
+	}
+}
+
+.footer__fields {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 36px 20px;
+	border: none;
+	margin-bottom: 60px;
+
+	li {
+		grid-column: 1 / -1;
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-row: auto;
+		align-items: center;
+	}
+
+	label,
+	input {
+		color: #F6EDE9;
+		font-size: 14px;
+		line-height: 18px;
+		grid-row: 1 / -1;
+		grid-column: 1 / -1;
+	}
+
+	input {
+		outline: none;
+		border: none;
+		background-color: library.$color-transparent;
+		border-bottom: 1px solid #A78587;
+		padding-bottom: 16px;
+		
+		&::placeholder {
+			color: #F6EDE9;
+		}
+	}
+}
+
+li.footer__field {
+
+	&--select {
+		grid-column: span 1;
+	}
+
+	&--checkbox {
+		grid-column: span 1;
+		padding-left: 44px;
+		position: relative;
+
+		label {
+			position: relative;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				width: 26px;
+				height: 26px;
+				border: 1px solid #A78587;
+				position: absolute;
+				top: 50%;
+				left: -43px;
+				transform: translateY(-50%);
+				cursor: pointer;
+			}
+		}
+
+		input {
+			left: -27px;
+    	bottom: 10px;
+
+			&:checked {
+				~ {
+					label {
+						&::after {
+							background-image: url('../img/icons/checked.svg');
+							background-size: 32px, 28px;
+							content: '';
+							width: 32px;
+							height: 28px;
+							position: absolute;
+							top: 50%;
+							left: -43px;
+							transform: translateY(-50%);
+							cursor: pointer;
+						}
+
+						&::before {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer__tender {
+	cursor: pointer;
+	width: 100%;
+}
+
+.footer__picture {
+	grid-column: 8 / -1;
+}
