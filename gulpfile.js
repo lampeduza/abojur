@@ -14,6 +14,13 @@ const imagemin = require("gulp-imagemin");
 const webp = require('gulp-webp');
 const sass = require('gulp-sass')(require('sass'));
 
+const ghPages = require('gh-pages');
+const path = require('path');
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
+}
+
 function html() {
 	return src("src/pug/pages/*.pug")
 		.pipe(plumber())
@@ -45,7 +52,6 @@ function css() {
 
 function js() {
 	return src("src/js/main.js")
-		//.pipe(webpackStream(webpackConfig)) // Зачем - то для webpack
 		.pipe(dest("dist/js"));
 }
 
@@ -141,3 +147,4 @@ exports.imagemin = optimizeImages;
 exports.webp = createWebp;
 exports.start = start;
 exports.build = build;
+exports.deploy = deploy;
